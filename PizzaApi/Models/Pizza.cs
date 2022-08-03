@@ -1,14 +1,17 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace PizzaApi.Models
 {
     [BsonIgnoreExtraElements]
+    [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class Pizza
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string _id { get; set; }
+        public string Id { get; set; }
 
         [BsonElement("name")]
         public string Name { get; set; }

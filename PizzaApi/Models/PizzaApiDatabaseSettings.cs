@@ -9,5 +9,6 @@
 
         public string PizzaCollectionName { get; set; } = null;
 
+        public string BeverageCollectionName { get; set; } = null;
     }
 }

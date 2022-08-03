@@ -1,0 +1,2 @@
+Pizza: {"Name":"Pizza","Description":"Good Fellas","Date":"2022-08-03T15:09:03.6122245+02:00"}
+Beverage: {"Name":"Beverage","Description":"Viski","Date":"2022-08-03T15:12:34.1169909+02:00"}

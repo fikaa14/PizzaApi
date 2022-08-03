@@ -1,0 +1,5 @@
+Beverage : {"Id":"62ea21cfe3960c1a62dca0f5","Name":"Juice","Containance":"Alchol"}
+Pizza : {"Id":"62ea21cfe3960c1a62dca0f8","Name":"Pizzeria Apan","Address1":"Langholmsgatan","Address2":"117 33 Stockholm"}
+Beverage : {"Id":"62ea21cfe3960c1a62dca0c5","Name":"Viski","Containance":"Alchol"}
+Beverage : {"Id":"62ea21cfe3960c1a62dca0d5","Name":"Viski","Containance":"Alchol"}
+Beverage : {"Id":"62ea21cfe3960c1a62dca1d5","Name":"Viski","Containance":"Alchol"}

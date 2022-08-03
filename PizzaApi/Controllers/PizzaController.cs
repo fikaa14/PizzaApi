@@ -9,10 +9,12 @@ namespace PizzaApi.Controllers
     public class PizzaController: ControllerBase
     {
         private readonly IPizzaService _pizzaService;
+        private readonly IMemoryService _memoryService;
 
-        public PizzaController(IPizzaService pizzaService)
+        public PizzaController(IPizzaService pizzaService, IMemoryService memoryService)
         {
             _pizzaService = pizzaService;
+            _memoryService = memoryService;
         }
 
         [HttpGet]
@@ -28,7 +30,7 @@ namespace PizzaApi.Controllers
         {
             await _pizzaService.CreateAsync(pizza);
 
-            return CreatedAtAction(nameof(Get), new { id = pizza._id }, pizza);
+            return CreatedAtAction(nameof(Get), new { id = pizza.Id }, pizza);
         }
 
         [HttpDelete("{id:length(24)}")]
@@ -42,6 +44,7 @@ namespace PizzaApi.Controllers
             }
 
             await _pizzaService.RemoveAsync(id);
+            await _memoryService.SaveObject<Pizza>(pizza);
 
             return NoContent();
 
